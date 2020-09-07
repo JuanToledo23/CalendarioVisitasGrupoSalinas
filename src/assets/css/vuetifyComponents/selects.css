@@ -1,0 +1,80 @@
+.v-application .primary--text,
+.divSelect .v-input--is-focused .v-input__control .primary--text {
+  color: #2d2926 !important;
+}
+.v-select__selections {
+  padding: 0 0 !important;
+}
+.v-select__selection {
+  font-size: 14px !important;
+}
+.divSelect .v-menu__content {
+  border: 1px solid #aab7ce;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  list-style: none;
+  min-width: 100% !important;
+  max-height: 304px;
+  top: 29px !important;
+  left: 0 !important;
+  transform-origin: left top;
+  z-index: 8;
+}
+.divSelect .v-input__icon.v-input__icon--append .v-icon {
+  background-image: url("~@/assets/img/select.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.divSelect .v-input__icon.v-input__icon--append .v-icon::before {
+  content: none !important;
+}
+
+.divSelect .v-input__icon.v-input__icon--clear .v-icon {
+  background-image: url("~@/assets/img/delete.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.divSelect .v-input__icon.v-input__icon--clear .v-icon::before {
+  content: none !important;
+}
+
+.divSelect .v-input__slot {
+  position: relative;
+}
+.divSelect .v-menu__content {
+  left: 0 !important;
+  top: 0 !important;
+}
+.divSelect .v-input__append-inner {
+  margin-top: 2px !important;
+}
+.divSelect .v-select .v-select--is-menu-active .v-input__icon--append .v-icon {
+  transform: rotate(180deg);
+}
+.v-select-list .v-list-item {
+  min-height: 30px !important;
+}
+.v-select-list .v-list-item__content {
+  padding: 5px 0 !important;
+}
+.v-select-list .v-list-item:hover {
+  background-color: #ffcd1361 !important;
+}
+.v-select-list .v-list-item:hover .v-list-item__title {
+  color: #000 !important;
+}
+.v-input__slot {
+  padding: 1px 12px !important;
+}
+
+.v-application .primary--text {
+  color: #000 !important;
+}

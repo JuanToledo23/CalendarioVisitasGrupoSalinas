@@ -1,0 +1,76 @@
+.v-text-field--solo .v-input__control {
+  min-height: 29px !important;
+}
+.v-text-field--solo .v-input__slot {
+  border: 1px solid #bfbfbf;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 37px !important;
+}
+.v-input .v-input__prepend-outer {
+  margin-right: 0 !important;
+}
+
+.v-file-input label {
+  font-size: 11px !important;
+}
+.v-text-field .v-label {
+  height: 20px !important;
+  line-height: 18px !important;
+  font-size: 14px !important;
+}
+.theme--light.v-label {
+  color: #2d2926 !important;
+}
+.v-input input {
+  max-height: 29px !important;
+}
+
+.v-textarea {
+  background-color: #ffffff !important;
+  height: 79px !important;
+}
+.v-textarea.v-text-field--enclosed,
+.v-textarea.v-text-field--enclosed.v-text-field--outlined:not(.v-input--dense)
+  textarea {
+  margin-top: 0 !important;
+}
+.v-textarea textarea {
+  resize: none !important;
+  padding: 7px 10px !important;
+  height: 79px !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.v-file-input .v-input__prepend-outer {
+  display: none !important;
+}
+.v-file-input label {
+  font-size: 11px !important;
+}
+.v-file-input .v-input__icon {
+  background-image: url("~@/assets/img/icoAdjuntar.svg");
+  background-size: 17px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 19px;
+}
+
+.v-file-input .mdi-close::before {
+  content: "\F156";
+  margin-right: 60px;
+  font-size: 17px;
+  z-index: 8;
+}
+
+
+/*INPUT BUSCAR*/
+.divBuscar .v-text-field .v-input__slot {
+  background-image: url("~@/assets/img/lupa.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 5px center !important;
+  padding: 3px 26px !important;
+}

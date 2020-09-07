@@ -1,0 +1,44 @@
+.v-input .v-text-field__slot .primary--text {
+  color: #2d2926 !important;
+}
+
+.v-text-field__slot,
+.v-select__selections,
+.v-list-item__title {
+  font-size: 11px !important;
+}
+
+.v-select-list .v-list-item .primary--text {
+  color: #2d2926 !important;
+}
+
+
+.theme--light.v-text-field:not(.v-input--has-state) > .v-input__control > .v-input__slot:hover:before {
+  border-color: transparent;
+}
+
+.v-input__slot {
+  padding: 1px 12px !important;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+.v-text-field__slot, .v-select__selections, .v-list-item__title {
+  font-size: 12px !important;
+}
+
+
+.v-text-field {
+  /* padding-top: 12px; */
+  margin-top: 4px;
+}
+
+textarea {resize: none;border: 1px solid #bfbfbf;background-color: #ffffff;padding: 7px 10px;height: 79px;width: 100%;box-sizing: border-box;-moz-box-sizing: 
+  border-box;-webkit-box-sizing: border-box;
+  border-style: solid !important;
+}
+
+.v-text-field.v-text-field--solo .v-input__control {
+  min-height: 35px !important;
+}

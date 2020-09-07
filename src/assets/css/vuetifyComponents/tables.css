@@ -1,0 +1,33 @@
+.tblVue .v-data-table__wrapper {
+    overflow-x: hidden !important;
+}
+.theme--light.v-data-table tbody tr:hover {
+    background: #eeeeee !important;
+}
+.theme--light.v-data-table {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.v-application .tblGeneral tr th.text-start {
+    text-align: center !important; 
+}
+
+.v-application .tblHallazgos tr td.text-start {
+    text-align: center !important; 
+}
+
+.v-application .tblHallazgos tr td:nth-child(5) {
+    text-align: left !important; 
+}
+
+
+
+.tblHallazgos tr:nth-child(odd) td {
+    background-color: #f2f2f2;
+    text-align: center !important;
+}
+.tblHallazgos tr:nth-child(even) td {
+    background-color: #f2f2f2;
+    text-align: center !important;
+}

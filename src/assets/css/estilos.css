@@ -1,0 +1,662 @@
+@import url("menu.css");
+@import url("fonts.css");
+@import url("columnas.css");
+@import url("modal.css");
+@import url("cards.css");
+@import url("tabs.css");
+@import url("tablas.css");
+@import url("forms.css");
+@import url("vuetifyComponents/general.css");
+
+/* general */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #ffcd00;
+  --main-color: #ffcd00;
+}
+.tLeft {text-align: left !important;}
+.tCenter {text-align: center !important;}
+.tRight {text-align: right !important;text-align: -webkit-right;}
+.fRight {float: right !important;}
+.fLeft {float: left !important;}
+.tJustify {text-align: justify !important;}
+strong {font-family: "Avenir_Next_Demi_Bold";}
+
+.cursor {cursor: pointer;}
+.clear {clear: both;}
+a {text-decoration: none;}
+a.liga {
+  color: #ff9600;
+  text-decoration: underline;
+  font-family: "AvenirNextLTPro-Medium";
+}
+.txt{color:#5a5854;}
+.txtV{color:#67af4a;}
+.txtN__light{color:#f19838;}
+.txtN{color:#ee7c31;}
+.txtR, .tRojo{color:#ea3425;}
+
+.border{border-left:3px solid#5a5854;}
+.borderV{border-left:3px solid #67af4a;padding: 16px 10px;}
+.borderN__light{border-left:3px solid #f19838;padding: 16px 10px;}
+.borderN{border-left:3px solid #ee7c31;padding: 16px 10px;}
+.borderR{border-left:3px solid #ea3425;padding: 16px 10px;}
+
+.bgR{background-color: #ea3425;}
+.bgV{background-color: #40AF2B;}
+
+.txtInfo {
+  font-size: 15px;
+  margin-top: 10px;
+  font-family: "Avenir_Next_Demi_Bold";
+}
+hr.hrSeccion {
+  border-top: 1px solid #d0cfcf;
+  margin: 10px 0px 20px 0px;
+}
+p {margin-bottom: 30px;}
+/* scroll */
+*::-webkit-scrollbar {width: 6px;}
+*::-webkit-scrollbar-track {background-color: #afafaf;}
+*::-webkit-scrollbar-thumb {background-color: #ffcd00;}
+.scroll {overflow-x: auto;}
+.scroll::-webkit-scrollbar {height: 5px;}
+.scroll::-webkit-scrollbar-track {background-color: #afafaf;}
+
+.scrolly {overflow-y: scroll;}
+.scrolly::-webkit-scrollbar {height: 5px;}
+.scrolly::-webkit-scrollbar-track {background-color: #afafaf;}
+.scrolly::-webkit-scrollbar-thumb {background-color: var(--main-bg-color);}
+
+.desac {
+  color: #ccc;
+  cursor: none;
+  pointer-events: none;
+  filter: opacity(50%);
+  -webkit-filter: opacity(50%);
+}
+.pRelative {position: relative;}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.obliga {
+  color: #ff000d;
+  font-family: "Avenir_Next_Demi_Bold";
+}
+.bold {
+  font-family: "Avenir_Next_Demi_Bold";
+}
+.normal {
+  font-family: "Avenir_Next_Regular";
+}
+.medium {
+  font-family: "AvenirNextLTPro-Medium";
+}
+.demi {
+  font-family: "Avenir_Next_Demi_Bold";
+}
+html,
+body {
+  font-family: "Avenir_Next_Regular";
+  background-color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: #2d2926;
+  min-width: 330px;
+  height: 100%;
+}
+
+.headerBar {
+  border-bottom: 2px solid #ffcd00 !important;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+.headerLogo {
+  text-align: center;
+}
+
+.headerUser {
+  padding-right: 44px !important;
+  justify-content: flex-end;
+  padding: 0px 5px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+img#imgLogo {
+  padding: 1px 0px 1px 0px;
+  height: 42px;
+}
+/*Titulo*/
+.titulo {
+  padding: 13px 3% 14px 3%;
+  background-color: #fafafa;
+  font-size: 18px;
+  color: #43413b;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.titulo .ruta {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1px 0px 0px 0px;
+}
+.titulo .ruta a {
+  color: #7e7e7e;
+  text-decoration: none;
+}
+.v-application .ruta ul {
+  padding: 0px;
+}
+.ruta ul li {
+  padding: 0px !important;
+  z-index: 0;
+}
+.ruta ul {
+  padding: 0px;
+}
+.footer {
+  width: 100%;
+  height: 30px;
+  background-color: #f8f7f7;
+  bottom: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 11px;
+  z-index: 2;
+  min-width: 320px;
+}
+.footer div {
+  width: 50%;
+  padding: 0px 3%;
+}
+.footer div:nth-child(1) {
+  border-right: 2px solid #ffcd00;
+  text-align: right;
+}
+.footer div:nth-child(2) {
+  text-align: left;
+}
+
+.subTitulo {
+  padding: 13px 0% 14px 0px;
+  font-size: 18px;
+  color: #43413b;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 15px;
+  font-family: "Avenir_Next_Demi_Bold";
+}
+.contSecc {
+  width: 94%;
+  margin-top: 20px;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.titSec {
+  border-bottom: 2px solid var(--main-color);
+  padding: 15px 0% 5px 0px;
+  font-family: "Avenir_Next_Demi_Bold";
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  color: #000;
+}
+.tit {
+  color: #333333;
+  font-family: "AvenirNextLTPro-Medium";
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.gris {
+  width: 100%;
+  margin: 0px auto;
+  padding: 15px 15px;
+  background-color: #fafafa;
+  -moz-box-shadow: 0 0px 1px rgb(226, 222, 222);
+  -webkit-box-shadow: 0 0px 1px rgb(226, 222, 222);
+  box-shadow: 0 0px 1px rgb(226, 222, 222);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.blanco {
+  width: 100%;
+  margin: 0px auto;
+  padding: 15px 15px;
+  background-color: #fff;
+  -moz-box-shadow: 0 0px 1px rgb(226, 222, 222);
+  -webkit-box-shadow: 0 0px 1px rgb(226, 222, 222);
+  box-shadow: 0 0px 1px rgb(226, 222, 222);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.btnCenter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 0px 10px 0px;
+}
+.btnCenter a {
+  margin: 0px 1% 0px 0px;
+}
+
+.btnG {
+  background-color: #54585a !important;
+  color: #fff !important;
+  font-family: "Avenir_Next_Regular";
+}
+.btnB {
+  background-color: #fafafa !important;
+  -moz-box-shadow: 0px 0px 11px rgb(204, 202, 202);
+  -webkit-box-shadow: 0px 0px 11px rgb(204, 202, 202);
+  box-shadow: 1px 1px 3px rgb(204, 202, 202);
+}
+
+.btn {
+  background-color: var(--main-bg-color);
+  text-decoration: none;
+  color: #575757;
+  cursor: pointer;
+  min-width: 120px !important;
+  font-family: "AvenirNextLTPro-Medium";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 10px 2%;
+  height: 36px;
+}
+.btn:hover {
+filter: opacity(.7);
+}
+.btn a {
+  text-decoration: none !important;
+}
+.btn div {
+  width: 15px;
+  height: 15px;
+  margin: 0px 10px 0px 0px;
+}
+.titSecCard {
+  font-family: Avenir_Next_Demi_Bold;
+  padding-bottom: 5px;
+  font-size: large;
+  border-bottom: 2px solid #ffcd00;
+}
+.indicaciones {
+  padding-bottom: 15px;
+  font-family: Avenir_Next_Demi_Bold;
+  font-size: 16px;
+}
+.titCampos {
+  padding-bottom: 2px;
+  font-family: Avenir_Next_Regular;
+  font-size: 16px;
+}
+.contSecc {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.btnAgregar {
+  text-align: center;
+  padding: 5px 10px;
+  margin: auto;
+  text-decoration: none;
+  color: #2d2926;
+  cursor: pointer;
+  padding: 5px 15px 5px 15px;
+  min-width: 120px;
+  max-width: 250px;
+  font-family: "AvenirNextLTPro-Medium";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+img.ico {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+/*Tooltip*/
+.tooltip-validation-error {
+  background-color: #fd5151 !important;
+  color: #fff;
+  text-align: center;
+  padding: 5px 12px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  z-index: 1;
+  bottom: 0;
+  font-weight: 100;
+  font-size: 1em;
+  transform: scale(0.75);
+}
+.tooltip-validation-error:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fd5151;
+  border-top: 0px;
+}
+.tooltip-validation-error:after,
+.tooltip-validation-error:before {
+  left: 0px;
+  top: -35%;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.validation-error-btn {
+  background-color: #fd5151 !important;
+  color: white !important;
+}
+.titInput {
+  font-size: 0.8em;
+  height: 46px;
+  text-align: left;
+}
+
+.tobliga {
+  font-size: 0.5em;
+  color: #ff000d;
+}
+
+.obullet {
+  color: red;
+}
+
+.bloqueada {
+  pointer-events: none;
+  color: rgba(116, 116, 117, 0.9);
+  opacity: 0.4;
+}
+.tr-bloqueado {
+  color: rgba(116, 116, 117, 0.9);
+  opacity: 0.4;
+}
+.none {
+  display: none !important;
+}
+.block {
+  display: inline-block !important;
+}
+.cfmodal {
+  width: 50%;
+  margin: 0 auto;
+}
+.mw90 {
+  max-width: 90%;
+  font-size: 12px;
+}
+.cotblke {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.cbloques {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.contti {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.superboton {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  /* max-height:334px; */
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  color: #424242;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+.superboton a {
+  color: #54585a;
+  text-decoration: underline;
+  font-size: 0.75em;
+}
+.superboton .descargar {
+  padding: 10px;
+}
+
+.superboton strong {
+  width: 90%;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  padding: 8px 5% 0px 5%;
+  height: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 400;
+  overflow: hidden;
+  font-family: "Avenir_Next_Demi_Bold";
+}
+.superboton div.imgbox {
+  margin: 1px auto 0px auto;
+
+  vertical-align: middle;
+}
+.superboton div.imgbox img {
+  margin: auto;
+  height: 125px;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+.superboton span {
+  margin-top: 38px;
+  margin-bottom: 18px;
+  display: block;
+  font-size: 0.8em;
+  font-family: "Avenir_Next_Demi_Bold";
+}
+
+a.btn.btn-blocke {
+  margin-top: 30px;
+  padding: 9px 9px;
+}
+.tmod {
+  font-size: 2.2em;
+  text-align: center;
+}
+.pblok {
+  padding: 25px 10px;
+}
+.cotm {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.tcboton a {
+  margin: 0 auto;
+  text-decoration: none;
+}
+.full-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bi-404 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  /* background-image: url("../img/errors/404.svg"); */
+}
+.bi-401 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  /* background-image: url("../img/errors/401.svg"); */
+}
+.bi-500 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  /* background-image: url("../img/errors/500.svg"); */
+}
+
+@media screen and (max-width: 920px) {
+  .cbloques {
+    width: 90%;
+    max-width: 90%;
+  }
+  .superboton span {
+    font-size: 0.7em;
+  }
+}
+
+.tooltip {
+  display: block !important;
+}
+
+.tooltip .tooltip-inner {
+  background: black;
+  color: white;
+  padding: 5px 10px 4px;
+}
+
+.tooltip .tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+  border-color: black;
+  z-index: 1;
+}
+
+.tooltip[x-placement^="top"] .tooltip-arrow {
+  border-width: 5px 5px 0 5px;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip[x-placement^="bottom"] .tooltip-arrow {
+  border-width: 0 5px 5px 5px;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-top-color: transparent !important;
+  top: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip[x-placement^="right"] .tooltip-arrow {
+  border-width: 5px 5px 5px 0;
+  border-left-color: transparent !important;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tooltip[x-placement^="left"] .tooltip-arrow {
+  border-width: 5px 0 5px 5px;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  right: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tooltip.popover .popover-inner {
+  cursor: pointer;
+  background: #fd5151;
+  color: white;
+  border-radius: 2px;
+  box-shadow: 0 5px 30px rgba(black, 0.1);
+}
+
+.tooltip.popover .popover-arrow {
+  border-color: #fd5151;
+}
+
+.tooltip[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s, visibility 0.15s;
+}
+
+.tooltip[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+/* Estilo para v-data-table */
+.tabla {
+  margin: 20px;
+}
+.tabla thead {
+  background-color: #fafafa;
+  border-bottom: 2px solid #ffcd00;
+}
+.tabla thead th {
+  font-family: Avenir_Next_Demi_Bold;
+  font-size: 16px;
+}
+.tabla tbody td {
+  font-family: Avenir_Next_Regular;
+  font-size: 13px;
+}
+.tabla tbody tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+.tabla footer {
+  background-color: #fafafa;
+}
+
+

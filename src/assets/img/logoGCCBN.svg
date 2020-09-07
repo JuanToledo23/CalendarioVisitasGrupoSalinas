@@ -1,0 +1,14 @@
+<svg width="776" height="306" xmlns="http://www.w3.org/2000/svg">
+    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="308" width="778" y="-1" x="-1" />
+        <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" />
+        </g>
+    </g>
+    <g>
+        <title>GCC</title>
+        <text style="cursor: move;" stroke="#000" transform="matrix(14.42860326720624,0,0,10.987809151876395,-1518.3836730826933,-1157.5739725899073) " xml:space="preserve" text-anchor="start" font-family="'League Gothic', sans-serif" font-size="24" id="svg_1" y="127.544135" x="105.5" stroke-width="0" fill="#585858">GCC</text>
+    </g>
+</svg>

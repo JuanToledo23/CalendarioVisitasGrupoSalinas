@@ -1,0 +1,46 @@
+.divRadio
+  .v-input--radio-group
+  .v-input--selection-controls__input
+  .accent--text:before {
+  display: none !important;
+}
+.divRadio .v-input--radio-group .v-input--selection-controls__input {
+  content: "";
+  background-image: url("~@/assets/img/radio.svg");
+  background-size: 15px !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-position: center 1px !important;
+  background-repeat: no-repeat !important;
+  margin-right: 8px;
+}
+.divRadio .v-item--active .v-input--selection-controls__input {
+  background-image: url("~@/assets/img/radioSelected.svg") !important;
+  background-size: 15px !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-repeat: no-repeat !important;
+}
+.divRadio .mdi-radiobox-blank::before {
+  content: none !important;
+}
+.divRadio .v-label {
+  font-size: 14px !important;
+}
+.divRadio .v-input--selection-controls {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.divRadio .v-input--selection-controls__ripple.primary--text {
+  width: 20px;
+  height: 20px;
+}
+.divRadio .v-input--selection-controls__ripple {
+  left: -12px;
+  top: calc(50.5% - 23.5px);
+  margin: 12px;
+}
+.divRadio .v-input--selection-controls__input .v-icon {
+  height: 17px;
+  font-size: 19px !important;
+}
