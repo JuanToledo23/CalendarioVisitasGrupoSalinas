@@ -1,0 +1,48 @@
+.arrows-container {
+    border-radius: 5px;
+}
+
+.arrows-container > .v-btn:hover {
+    background-color: #eaeaea;
+}
+
+.arrows-container > .v-btn:first-of-type {
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: 5px;
+    border-right: unset;
+    width: 48px;
+    min-width: unset !important;
+    height: 48px;
+}
+.arrows-container > .v-btn:last-of-type {
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+    border-top-left-radius: unset;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: unset;
+    width: 48px;
+    min-width: unset !important;
+    height: 48px;
+}
+
+
+.v-item--active {
+    background-color: #ffc900 !important;
+}
+
+.v-btn--contained {
+    box-shadow: unset !important;
+}
+
+.v-btn:not(.v-btn--text):not(.v-btn--outlined).v-btn--active:before {
+    opacity: 0 !important;
+}
+
+.v-application--is-ltr .v-btn-toggle > .v-btn.v-btn:not(:first-child) {
+    border-left-width: 1px !important;
+}

@@ -1,7 +1,6 @@
-/*@import url("vuetifyComponents/selects.css");
+@import url("vuetifyComponents/selects.css");
 @import url("vuetifyComponents/inputs.css");
 @import url("vuetifyComponents/buttons.css");
-@import url("vuetifyComponents/radioButtons.css");
-@import url("vuetifyComponents/tables.css");
-@import url("vuetifyComponents/tabs.css");
-@import url("vuetifyComponents/forms.css");*/
+@import url("vuetifyComponents/forms.css");
+@import url("vuetifyComponents/calendar.css");
+@import url("vuetifyComponents/group-button-toggle.css");

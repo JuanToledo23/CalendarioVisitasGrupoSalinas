@@ -2,13 +2,15 @@
 @import url("fonts.css");
 @import url("columnas.css");
 @import url("modal.css");
-@import url("cards.css");
-@import url("tabs.css");
-@import url("tablas.css");
 @import url("forms.css");
-@import url("vuetifyComponents/general.css");
+@import url("custom-vuetify.css");
 
 /* general */
+
+body {
+  font-family: "Avenir_Next_Demi_Bold";
+}
+
 * {
   margin: 0px;
   padding: 0px;

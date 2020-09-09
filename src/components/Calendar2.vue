@@ -7,63 +7,102 @@
             <v-col>
                 <v-sheet height="64">
                 <v-toolbar flat color="white">
-                    <v-btn fab text small color="grey darken-2" @click="prev">
+                    <!-- 
+                        <v-btn fab text small color="grey darken-2" @click="prev">
                     <v-icon small>mdi-chevron-left</v-icon>
                     </v-btn>
                     <v-btn fab text small color="grey darken-2" @click="next">
                     <v-icon small>mdi-chevron-right</v-icon>
-                    </v-btn>
+                    </v-btn> -->
+
+                    <div class="arrows-container">
+                        <v-btn text medium color="grey" @click="prev">
+                            <v-icon medium>mdi-chevron-left</v-icon>
+                        </v-btn>
+                        <v-btn text medium color="grey" @click="next">
+                            <v-icon medium>mdi-chevron-right</v-icon>
+                        </v-btn>
+                    </div>
+
                     <v-toolbar-title v-if="$refs.calendar">
-                    {{ $refs.calendar.title }}
+                    <span style="color: #000">{{ $refs.calendar.title }}</span> <span v-if="showWeek" style="color: rgb(119 119 119)"> (Semana {{ week }}) </span>
                     </v-toolbar-title>
-                    <v-spacer></v-spacer>
+                    <v-toolbar-title>
+                    <span style="color: #000">{{ tittleDay }}</span>
+                    </v-toolbar-title>
+                    
                     <div>
                         <v-btn-toggle
-                            v-model="toggle_exclusive"
+                            v-model="toggle_calendar"
                             mandatory
                             >
-                            <v-btn @click="type = 'month'" ref='btn_mes'>
+                            <v-btn @click="selectMonth">
                                 Mes
                             </v-btn>
-                            <v-btn @click="type = 'week'" ref='btn_semana'>
+                            <v-btn @click="selectWeek">
                                 Semana
                             </v-btn>
-                            <v-btn @click="type = 'day'" ref='btn_dia'>
+                            <v-btn @click="selectDay">
                                 Día
                             </v-btn>
-                            </v-btn-toggle>
+                        </v-btn-toggle>
                     </div>
                 </v-toolbar>
                 </v-sheet>
-                <v-sheet height="600">
+                <v-sheet height="1000">
                 <v-calendar
-                    color="yellow"
+                    color="#ffeeb2"
                     ref="calendar"
                     v-model="focus"
                     :events="events"
                     :event-color="getEventColor"
                     :type="type"
+                    :short-weekdays="false"
                     @click:event="viewDay2($event)"
+                    @click:more="viewDay2($event)"
+                    @click:date="updateDateSelected"
                     @change="updateRange"
                 >
-                    <template v-slot:day-header="{ date }">
-                    <v-row class="fill-height" >
-                        <template v-if="evaluarFecha(date)[0]">
-                            <div class="contenedor-evento" >
-                                {{evaluarFecha(date)[1].date}}
+<!--                     <template v-slot:day-header="{ date }">
+                        <v-row class="fill-height" >
+                            <template v-if="evaluarFecha(date)[0]">
+                                <div class="contenedor-evento">
+                                    {{evaluarFecha(date)[1]}}
+                                </div>
+                            </template>
+                        </v-row>
+                    </template> -->
+                    <!-- <template v-slot:day="{ date }">
+                        <v-row class="fill-height" >
+                            <template v-if="evaluarFecha(date)[0]">
+                                <div class="contenedor-evento">
+                                    {{evaluarFecha(date)[1]}}
+                                </div>
+                            </template>
+                        </v-row>
+                    </template> -->
+                    <template v-slot:event="{ event }">
+                        <div class="event-container" layout="column">
+                            <div class="custom-event black--text">
+                                <span class="dot" v-bind:style="{ backgroundColor: event.dotColor }"></span>
+                                {{ event.name }}
                             </div>
-                        </template>
-                    </v-row>
+                            <!-- <div>Juan Alberto Toledo Tello</div> -->
+                        </div>
                     </template>
-                    <template v-slot:day="{ date }">
-                    <v-row class="fill-height" >
-                        <template v-if="evaluarFecha(date)[0]">
-                            <div class="contenedor-evento" >
-                                {{evaluarFecha(date)[1].date}}
-                            </div>
-                        </template>
-                    </v-row>
-                    </template>
+                    <!-- <template v-slot:event="{ event }">
+                        <v-row class="fill-height" >
+                            <template>
+                                <div class="contenedor-evento">
+                                    hello world, {{ event.name }}
+                                </div>
+                                <br>
+                                <div>
+                                    iuefyuerfuergf
+                                </div>
+                            </template>
+                        </v-row>
+                    </template> -->
                 </v-calendar>
                 </v-sheet>
             </v-col>
@@ -77,33 +116,34 @@ export default {
     },
     data() {
         return {
-                toggle_exclusive: undefined,
+                toggle_calendar: undefined,
                 focus: '',
                 type: 'month',
                 events: [],
+                week: undefined,
+                showWeek: false,
+                selectedDate: new Date(),
+                tittleDay: ':)',
+                firstPrev: true,
         }
     },
     mounted () {
         this.$refs.calendar.checkChange()
         this.events.push({
             name: 'Evento 2',
-            start: new Date('2020-09-09T00:00:00'),
-            end: new Date('2020-09-09T12:00:00'),
-            color: 'transparent',
+            start: new Date('2020-09-10T00:00:00'),
+            color: '#ffeeb2',
             timed: false,
-            date: '2020-09-09',
-            seleccionado: false
+            dotColor: 'red'
         });
 
         this.events.push({
             name: 'Evento 1',
-            start: new Date('2020-09-10T00:00:00'),
-            end: new Date('2020-09-10T12:00:00'),
+            start: new Date('2020-09-17T00:00:00'),
             color: 'transparent',
             timed: false,
-            date: '2020-09-10',
-            seleccionado: false
-        });
+            dotColor: 'blue'
+        });        
     },
     methods: {
         // viewDay ({ date }) {
@@ -111,64 +151,98 @@ export default {
         // this.type = 'day'
         // },
         viewDay2 (e) {
+            console.log(e);
+ /*            let date = new Date(e.day.date);
+            console.log(date.getWeek());
+            this.week = date.getWeek(); */
             this.focus = e.day.date
             this.type = 'day'
+            this.showWeek = false
         },
         getEventColor (event) {
         return event.color
         },
         setToday () {
-        this.focus = ''
+            this.focus = ''
         },
         prev () {
-        this.$refs.calendar.prev()
+            this.$refs.calendar.prev()
+            this.updateDate(false)
+            console.log(this.selectedDate.getWeek());
+            this.week = this.selectedDate.getWeek();
         },
         next () {
-        this.$refs.calendar.next()
+            this.$refs.calendar.next()
+            this.updateDate(true)
+            console.log(this.selectedDate.getWeek());
+            this.week = this.selectedDate.getWeek();
         },
         updateRange () {
 
         },
-        evaluarFecha(date) {
-            let index = this.events.map((e) => { return e.date; }).indexOf(date);
-            return [index !== -1, this.events[index]]
+        selectWeek () {
+            let date = new Date(this.selectedDate);
+            console.log(date.getWeek());
+            this.week = date.getWeek();
+            this.type = 'week'
+            this.showWeek = true
+        },
+        selectMonth () {
+            this.type = 'month'
+            this.showWeek = false
+        },
+        selectDay () {
+            let date = new Date(this.selectedDate);
+            console.log(date);
+            date.setDate(date.getDate() + 1)
+            let monthYear = this.$refs.calendar.title.split(' ')
+            this.tittleDay = monthYear[0] + ' ' + date.getDate() + ' ' + monthYear[1]
+            this.type = 'day'
+            this.showWeek = false
+        },
+        updateDateSelected ({ date }) {
+            console.log(date);
+            this.selectedDate = new Date(date);
+        },
+        updateDate (direccion) {
+            console.log(this.selectedDate)
+            if(direccion) {
+                this.selectedDate.setDate(this.selectedDate.getDate() + 1)
+            } else {
+                this.selectedDate.setDate(this.selectedDate.getDate() - 1)
+            }
         }
+
+/*         evaluarFecha(date) {
+            let index = this.events.map((e) => { return e.date; }).indexOf(date);
+            console.log(index)
+            return [index !== -1, this.events[index]]
+        }, */
+        /* evaluarFecha(date) {
+            let index = this.events.map((e) => { return e.date; }).indexOf(date);
+            console.log(index);
+            return [index !== -1, this.events[index]]
+        } */
+/*         eventsMap() {
+            const map = {};
+            this.events.forEach(e => (map[e.date] = map[e.date] || []).push(e));
+            return map
+        } */
     }
 }
+
+Date.prototype.getWeek = function() {
+    var date = new Date(this.getTime());
+    date.setHours(0, 0, 0, 0);
+    date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+    var week1 = new Date(date.getFullYear(), 0, 4);
+    return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-/* Calendar */
-.v-application .white--text {
-    color: #000000 !important;
-}
-.v-application .pl-1::before {
-    content:"\A";
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background: #b83b3b;
-    display:inline-block;
-    margin-right: 5px;
-}
-
-/* .v-application .pl-1 > strong {
-    display: none;
-} */
-
-.v-application .pl-1 {
-    color: black;
-}
-
-.contenedor-evento {
-    color: red;
-}
-
-.row {
-    margin-right: unset !important;
-    margin-left: unset !important;
-}
-
-/* Fin Calendar */
+<style scoped>
+@import url('../assets/css/vuetifyComponents/calendar.css');
 </style>
+

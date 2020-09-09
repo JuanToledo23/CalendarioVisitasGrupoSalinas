@@ -62,7 +62,6 @@ export default {
 </script>
 
 <style>
-@import "./assets/css/estilos.css";
+@import "./assets/css/styles.css";
 @import "./assets/css/materialdesignicons.min.css";
-@import "./assets/css/custom-vuetify.css";
 </style>
