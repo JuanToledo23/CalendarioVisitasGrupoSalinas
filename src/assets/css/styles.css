@@ -255,7 +255,7 @@ img#imgLogo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 15px 0px 10px 0px;
+  padding: 15px 0px 10px 0px;
 }
 .btnCenter a {
   margin: 0px 1% 0px 0px;
@@ -661,4 +661,21 @@ a.btn.btn-blocke {
   background-color: #fafafa;
 }
 
+.w-100 {
+  width: 100%;
+}
 
+.d-flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-size-11 {
+  font-size: 1.1em !important;
+}
+.font-size-12 {
+  font-size: 1.2em !important;
+}
+.font-size-17 {
+  font-size: 1.7rem !important;
+}

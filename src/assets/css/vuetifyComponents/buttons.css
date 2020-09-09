@@ -10,3 +10,14 @@
 .v-btn {
   text-transform: unset !important;
 }
+
+.btn-yellow {
+  background-color: #ffc900 !important;
+  font-family: 'Avenir_Next_Bold' !important;
+  color: #000 !important;
+}
+
+.v-application .green--text.text--darken-1 {
+  color: #000 !important;
+  caret-color: #000 !important;
+}

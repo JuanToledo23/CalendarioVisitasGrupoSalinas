@@ -1,15 +1,31 @@
 .v-application .pl-1::before {
-    content:"+";
-    margin-right: 5px;
+    content: "+";
+    margin-right: 2px;
 }
 
 .event-container {
-    padding: 0px 5px;
+    width: 100%;
 }
 
-.custom-event {
+.event-content-day {
+    padding: 11px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    min-height: 70px;
+    height: 70px;
+}
+.event-content-week {
+    padding: 11px;
+    display: flex;
+    align-items: baseline;
+    min-height: 110px;
+    height: 110px;
+}
+
+.event-content-month {
+    padding: 0px 10px;
+    display: flex;
+    align-items: baseline;
 }
 
 .v-event {
@@ -20,23 +36,31 @@
 }
 
 .dot {
-    height: 8px;
-    width: 8px;
+    height: 10px;
+    width: 10px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
+    min-width: 10px;
+    min-height: 10px;
 }
 
 .v-calendar-weekly__head-weekday {
-    text-transform: capitalize !important; 
+    text-transform: capitalize !important;
 }
 
 .v-calendar-weekly__head {
-    height: 30px;
+    height: 35px;
     display: flex;
     align-items: center;
     background-color: #ffeeb2;
+}
+
+.v-calendar-weekly__head .v-calendar-weekly__head-weekday, .v-calendar-daily_head-weekday  {
+    font-size: 1.2em !important;
+    text-transform: capitalize !important;
+    color: #000 !important;
 }
 
 .theme--light.v-calendar-weekly .v-calendar-weekly__head-weekday {
@@ -55,4 +79,107 @@
 
 .v-calendar-daily__body {
     display: none !important;
+}
+
+.v-calendar .v-event {
+
+    /* cursor: unset !important; */
+}
+
+.v-calendar-daily_head-day  > .v-event {
+    white-space: unset !important;
+    width: 100% !important;
+    border-radius: unset !important;
+}
+.v-calendar-monthly > .v-event {
+    white-space: unset !important;
+    width: 100% !important;
+    /* border-radius: unset !important; */
+}
+
+.content-space {
+    line-height: 15px;
+    padding-bottom: 8px;
+}
+
+.separator, .v-calendar-daily_head-weekday {
+    border-bottom: solid 1px #e0e0e0;
+}
+
+.v-calendar-daily_head-day-label {
+    height: 60px;
+}
+
+.v-calendar-daily_head-day-label>.v-btn {
+    margin-top: 3px;
+}
+
+.v-calendar-daily_head-weekday {
+    background-color: #ffeeb2;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black !important;
+}
+
+.buttons-position {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.buttons-container .edit, .buttons-container .delete {
+    display: flex;
+    align-items: center;
+}
+
+.buttons-container .edit img, .buttons-container .delete img {
+    width: 15px;
+}
+
+.buttons-container .edit span {
+    color: black;
+    text-decoration: underline;
+    padding-left: 5px;
+    margin: 0px 0px 0px 2px;
+}
+
+.buttons-container .edit {
+    margin-right: 30px;
+}
+
+.buttons-container .delete span {
+    color: black;
+    text-decoration: underline;
+    padding-left: 5px;
+    margin: 0px 0px 0px 2px;
+}
+
+.buttons-container .edit, .buttons-container .delete {
+    cursor: pointer;
+}
+
+.v-ripple__container {
+    display: none;
+}
+
+.v-calendar-daily__intervals-head {
+    width: 10px !important;
+}
+
+.v-event-more {
+    margin: 0px 8.1px;
+    background-color: transparent !important;
+    color: #8d8d8d;
+    font-family: "Avenir_Next_Regular" !important;
+}
+
+.w90px {
+    width: 90px;
 }
