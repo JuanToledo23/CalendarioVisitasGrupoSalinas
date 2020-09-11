@@ -78,3 +78,19 @@
 .v-application .primary--text {
   color: #000 !important;
 }
+
+.v-text-field.v-text-field--solo .v-input__control input {
+  display: none;
+}
+.v-icon.v-icon {
+  color: #ffc900;
+}
+
+.v-select-list .v-list-item--active {
+  color: #ffc900 !important;
+  caret-color: #ffc900 !important;
+}
+
+.v-text-field.v-text-field--enclosed {
+  height: 29px;
+}

@@ -5,7 +5,14 @@
   border: 1px solid #bfbfbf;
   border-radius: 0 !important;
   box-shadow: none !important;
-  min-height: 37px !important;
+  min-height: unset !important;
+  max-height: 29px;
+  height: 29px;
+}
+
+.v-select__selection {
+  font-size: unset !important;
+  margin: 3px 4px 3px 0 !important;
 }
 .v-input .v-input__prepend-outer {
   margin-right: 0 !important;
@@ -65,7 +72,6 @@
   z-index: 8;
 }
 
-
 /*INPUT BUSCAR*/
 .divBuscar .v-text-field .v-input__slot {
   background-image: url("~@/assets/img/lupa.svg") !important;
@@ -73,4 +79,15 @@
   background-size: 15px !important;
   background-position: 5px center !important;
   padding: 3px 26px !important;
+}
+
+.datapicker1 {
+  width: 135px;
+  background-image: url("~@/assets/img/calendario.svg");
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  width: 135px;
+  background-size: 17px;
+  background-position: 98% 50%;
+  width: 94%;
 }

@@ -1,7 +1,5 @@
-@import url("menu.css");
 @import url("fonts.css");
 @import url("columnas.css");
-@import url("modal.css");
 @import url("forms.css");
 @import url("custom-vuetify.css");
 
@@ -9,6 +7,10 @@
 
 body {
   font-family: "Avenir_Next_Demi_Bold";
+}
+
+.v-application {
+  font-family: "Avenir_Next_Regular" !important;
 }
 
 * {
@@ -28,7 +30,7 @@ body {
 .fRight {float: right !important;}
 .fLeft {float: left !important;}
 .tJustify {text-align: justify !important;}
-strong {font-family: "Avenir_Next_Demi_Bold";}
+strong {font-family: "AvenirNextLTPro-Medium";}
 
 .cursor {cursor: pointer;}
 .clear {clear: both;}
@@ -232,12 +234,8 @@ img#imgLogo {
 .gris {
   width: 100%;
   margin: 0px auto;
-  padding: 15px 15px;
+  padding: 15px 0px;
   background-color: #fafafa;
-  -moz-box-shadow: 0 0px 1px rgb(226, 222, 222);
-  -webkit-box-shadow: 0 0px 1px rgb(226, 222, 222);
-  box-shadow: 0 0px 1px rgb(226, 222, 222);
-  margin-bottom: 15px;
   text-align: justify;
 }
 .blanco {
@@ -255,7 +253,7 @@ img#imgLogo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 15px 0px 10px 0px;
+  padding: 0px 0px 15px 0px;
 }
 .btnCenter a {
   margin: 0px 1% 0px 0px;
@@ -661,6 +659,7 @@ a.btn.btn-blocke {
   background-color: #fafafa;
 }
 
+
 .w-100 {
   width: 100%;
 }
@@ -676,6 +675,11 @@ a.btn.btn-blocke {
 .font-size-12 {
   font-size: 1.2em !important;
 }
-.font-size-17 {
-  font-size: 1.7rem !important;
+.font-size-13 {
+  font-size: 1.3em !important;
 }
+.font-size-2 {
+  font-size: 2rem !important;
+}
+
+.desac{color:#ccc; cursor: none; pointer-events: none;filter: opacity(50%);-webkit-filter: opacity(50%);}

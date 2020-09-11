@@ -1,0 +1,12 @@
+.v-sheet.v-card {
+    border-radius: unset !important;
+    background-color: #fafafa;
+}
+
+.v-dialog {
+    border-radius: unset !important;
+}
+
+.titDialog {
+    padding: 0px 0px 10px 0px;
+}

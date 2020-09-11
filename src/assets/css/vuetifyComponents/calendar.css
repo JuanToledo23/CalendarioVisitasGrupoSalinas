@@ -1,4 +1,4 @@
-.v-application .pl-1::before {
+.v-event-more::before {
     content: "+";
     margin-right: 2px;
 }
@@ -61,6 +61,7 @@
     font-size: 1.2em !important;
     text-transform: capitalize !important;
     color: #000 !important;
+    font-family: 'AvenirNextLTPro-Medium';
 }
 
 .theme--light.v-calendar-weekly .v-calendar-weekly__head-weekday {
@@ -75,6 +76,7 @@
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+    font-family: 'AvenirNextLTPro-Medium';
 }
 
 .v-calendar-daily__body {
@@ -107,7 +109,7 @@
 }
 
 .v-calendar-daily_head-day-label {
-    height: 60px;
+    height: 45px;
 }
 
 .v-calendar-daily_head-day-label>.v-btn {
@@ -170,11 +172,13 @@
 }
 
 .v-calendar-daily__intervals-head {
-    width: 10px !important;
+    width: 0px !important;
+    border: unset !important;
 }
 
 .v-event-more {
-    margin: 0px 8.1px;
+    
+    margin: 0px 13px;
     background-color: transparent !important;
     color: #8d8d8d;
     font-family: "Avenir_Next_Regular" !important;
@@ -182,4 +186,26 @@
 
 .w90px {
     width: 90px;
+}
+
+.v-toolbar__content, .v-toolbar__extension {
+    padding: 0px !important;
+}
+
+.v-calendar-weekly__day-label {
+    margin: 5px 0px 7px 0px !important;
+}
+
+.v-btn--fab.v-size--small,.v-btn--fab.v-size--default {
+    height: 30px !important;
+    width: 30px !important;
+    font-family: 'AvenirNextLTPro-Medium';
+}
+
+.v-calendar-daily__head {
+    height: 100%;
+}
+
+.v-calendar-daily_head-day-label>.v-btn {
+    margin-top: 7px !important;
 }

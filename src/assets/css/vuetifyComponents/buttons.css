@@ -11,13 +11,28 @@
   text-transform: unset !important;
 }
 
+.btn {
+  width: 170px !important;
+}
+
 .btn-yellow {
   background-color: #ffc900 !important;
-  font-family: 'Avenir_Next_Bold' !important;
+  font-family: 'AvenirNextLTPro-Medium' !important;
+  color: #000 !important;
+}
+
+.btn-gray {
+  background-color: #d6d6d6 !important;
+  font-family: 'AvenirNextLTPro-Medium' !important;
   color: #000 !important;
 }
 
 .v-application .green--text.text--darken-1 {
   color: #000 !important;
   caret-color: #000 !important;
+}
+
+.btnIco {
+  width: 15px;
+  margin-right: 8px;
 }
