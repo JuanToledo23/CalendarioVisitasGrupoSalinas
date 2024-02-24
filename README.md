@@ -1,4 +1,6 @@
-# administracion-vistas
+# Calendario de visitas Grupo Salinas
+
+## (Vue) Maquetado de calendario interactivo para gestionar visitas.
 
 ## Project setup
 ```
