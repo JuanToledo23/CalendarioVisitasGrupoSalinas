@@ -2,6 +2,8 @@
 
 ## (Vue) Maquetado de calendario interactivo para gestionar visitas.
 
+Utilizar version de [NodeJS 15.14.0](https://nodejs.org/dist/v15.14.0/)
+
 ## Project setup
 ```
 npm install
